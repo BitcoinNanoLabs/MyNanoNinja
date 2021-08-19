@@ -7,16 +7,16 @@ module.exports = {
 
     // First application
     {
-      name      : 'My Nano Ninja',
+      name      : 'Bitcoin Nano Ninja',
       script    : 'bin/www',
       "log_date_format" : "YYYY-MM-DD HH:mm:ss",
       env: {
         NODE_ENV: 'production',
-        DOMAIN: 'https://mynano.ninja',
-        NODE_RPC: 'http://[::1]:7076',
+        DOMAIN: 'https://bitcoinnano.org/ninja',
+        NODE_RPC: 'https://api.bitcoinnano.org',
         NODE_INTERNAL: '12000',
-        MONGO_URL: 'mongodb://localhost:27017/mynanoninja',
-        MONGO_SESSIONURL: 'mongodb://localhost:27017/mynanoninja-session',
+        MONGO_URL: 'mongodb://localhost:27017/bitcoinnanoninja',
+        MONGO_SESSIONURL: 'mongodb://localhost:27017/bitcoinnanoninja-session',
         SESSION_SECRET: 'ohyeahnanoisgreat',
         SENTRY_URL: '',
         FACEBOOK_CLIENTID: '',
@@ -45,15 +45,15 @@ module.exports = {
       }
     },
     {
-      name      : 'My Nano Ninja - CRON',
+      name      : 'Bitcoin Nano Ninja - CRON',
       script    : 'cron',
       "log_date_format" : "YYYY-MM-DD HH:mm:ss",
       env: {
         NODE_ENV: 'production',
-        DOMAIN: 'https://mynano.ninja',
-        NODE_RPC: 'http://[::1]:7076',
-        NODE_WS: 'ws://[::1]:7078',
-        MONGO_URL: 'mongodb://localhost:27017/mynanoninja',
+        DOMAIN: 'https://bitcoinnano.org/ninja',
+        NODE_RPC: 'https://api.bitcoinnano.org',
+        NODE_WS: 'wss://ws.bitcoinnano.org',
+        MONGO_URL: 'mongodb://localhost:27017/bitcoinnanoninja',
         SENTRY_URL: '',
         EMAIL_HOST: 'smtp.myhost.com',
         EMAIL_USER: 'alert@mynano.ninja',

@@ -24,7 +24,7 @@ cron.schedule('*/30 * * * *', updateNodeUptime);
 function updateNodeUptime() {
   console.log('UPTIME NOTIFICATION: Started');
   Account.find()
-    .where('votingweight').gte(1000000000000000000000000000000000) // 1000 NANO minimum
+    .where('votingweight').gte(1000000000000000000000000000000000) // 1000 BITCOIN NANO minimum
     .populate('owner')
     .exec(function (err, accounts) {
       if (err) {
@@ -120,7 +120,7 @@ function sendUpMail(account, email) {
   var body = 'The Nano representative ' + title + ' is up again.<br>' +
     lastvote + '.<br>' +
     'Address: ' + account.account + '<br><br>' +
-    '<a href="https://mynano.ninja/account/' + account.account + '">View on My Nano Ninja</a>'
+    '<a href="https://mynano.ninja/account/' + account.account + '">View on Bitcoin Nano Ninja</a>'
 
   sendMail('UP: ' + title, body, email);
 }
@@ -142,14 +142,14 @@ function sendDownMail(account, email) {
   var body = 'The Nano representative ' + title + ' is down.<br>' +
     lastvote + '.<br>' +
     'Address: ' + account.account + '<br><br>' +
-    '<a href="https://mynano.ninja/account/' + account.account + '">View on My Nano Ninja</a>'
+    '<a href="https://mynano.ninja/account/' + account.account + '">View on Bitcoin Nano Ninja</a>'
 
   sendMail('DOWN: ' + title, body, email);
 }
 
 function sendMail(subject, body, email) {
   var data = {
-    from: 'My Nano Ninja <alert@mynano.ninja>',
+    from: 'Bitcoin Nano Ninja <alert@mynano.ninja>',
     to: email,
     subject: subject,
     html: body

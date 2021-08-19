@@ -1,4 +1,4 @@
-console.log('=== STARING NANO NINJA ===');
+console.log('=== STARING BITCOIN NANO NINJA ===');
 
 var Raven = require('raven');
 Raven.config(process.env.SENTRY_URL).install();
@@ -31,7 +31,7 @@ mongoose.connect(configDB.url,
 var nanorpc = require('./nano/rpc_client');
 
 // passport
-require('./config/passport')(passport); // pass passport for configuration
+//require('./config/passport')(passport); // pass passport for configuration
 
 var app = express();
 

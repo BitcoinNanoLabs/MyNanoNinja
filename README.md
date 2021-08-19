@@ -4,7 +4,7 @@
 </div>
 <hr />
 
-# My Nano Ninja
+# Bitcoin Nano Ninja
 
 The perfect tool for Nano representatives lists and network statistics.
 

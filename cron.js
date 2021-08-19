@@ -1,4 +1,4 @@
-console.log('=== STARING NANO NINJA CRON ===');
+console.log('=== STARING BITCOIN NANO NINJA CRON ===');
 
 require('dotenv').config()
 

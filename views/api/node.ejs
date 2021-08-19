@@ -1,6 +1,6 @@
 <% include ../../partials/header.ejs %>
 
-<h1>My Nano Ninja - Node API</h1>
+<h1>Bitcoin Nano Ninja - Node API</h1>
 <h4>Build awesome apps with the Ninja!</h4>
 
 <p>Do you want to build your project with Nano but don't want to run your own node? The Ninja is here to help you!</p>
@@ -12,7 +12,7 @@
       <h4 class="my-0 font-weight-normal">Free</h4>
     </div>
     <div class="card-body">
-      <h1 class="card-title pricing-card-title">0 NANO</h1>
+      <h1 class="card-title pricing-card-title">0 BTCO</h1>
       <ul class="list-unstyled mt-3 mb-4">
         <li>500 tokens / 60 mins</li>
         <li>For testing</li>
@@ -26,10 +26,10 @@
       <h4 class="my-0 font-weight-normal">Pro</h4>
     </div>
     <div class="card-body">
-      <h1 class="card-title pricing-card-title">0.001 NANO<small class="text-muted">/ token</small></h1>
+      <h1 class="card-title pricing-card-title">0.001 BTCO<small class="text-muted">/ token</small></h1>
       <ul class="list-unstyled mt-3 mb-4">
         <li>Pay-as-you-go</li>
-        <li>Fill up with NANO</li>
+        <li>Fill up with BTCO</li>
         <li>Any project size</li>
       </ul>
       <a href="#pro" class="btn btn-lg btn-block btn-primary">Get started</a>
@@ -90,7 +90,7 @@
 </p>
 <p>
   Anything missing? 
-  Suggest it on <a href="https://discord.gg/Dd8CUbv" target="_blank" rel="noreferer, noopener">Discord</a> or 
+  Suggest it on <a href="https://discord.gg/tgedbqTc" target="_blank" rel="noreferer, noopener">Discord</a> or 
   <a href="https://github.com/BitDesert/MyNanoNinja/issues/new">GitHub</a>!
   <br>
   Important note: <code>work_generate</code> consumes 50 tokens instead of 1.
@@ -151,7 +151,7 @@
 
 <script>
   window.acceptNano.setup({
-    apiURL: '<%= payment_api %>', // URL of your Accept NANO server (String, required)
+    apiURL: '<%= payment_api %>', // URL of your Accept BTCO server (String, required)
     debug: false, // used for enabling debug mode, (Bool, non-required, false by default)
     pollInterval: 1500, // time period (ms) to check for verification of the payment sessions (Number, non-required, 1500 by default)
   });
@@ -162,7 +162,7 @@
         window.acceptNano.startPayment({
           data: {
             amount: ($('#moreapitokens').val() * 0.001),
-            currency: 'nano'
+            currency: 'btco'
           },
           onStart: (paymentData) => {
             console.log('onStart', paymentData)
